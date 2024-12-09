@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles-catalog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header center">
+        <nav class="main-header__navigation-container">
+            <a href="index.html"><img src="./images/logo.svg" alt="Logo" class="main-header__navigation-logo"></a>
+            <p class="main-header__search-container">
+                <input type="search" placeholder="Search" class="main-header__search">
+            </p>
+            <ul class="main-header__menu-container">
+                <li>
+                    <a href="catalog.html" class="main-header__menu-link">Catalog</a>
+                </li>
+                <li class="main-header__basket-container">
+                    <a href="basket.html" class="main-header__menu-link" id="basket-link">Basket</a>
+                    <div id="basket-popup" class="main-header__popup">
+                        <div class="main-header__popup-order">
+                            <article class="main-header__popup-item">
+                                <div class="main-header__popup-item-container">
+                                    <img src="./images/basket/item-1.png" class="main-header__popup-item-image"
+                                        alt="Item image">
+                                    <div class="main-header__popup-item-product">
+                                        <h3 class="main-header__popup-item-description-heading">Table Menu</h3>
+                                        <div class="main-header__popup-item-amount">340 €</div>
+                                        <div class="main-header__popup-item-buttons">
+                                            <a href="favorites.html" class="main-header__popup-item-button-link">My
+                                                favorites</a>
+                                            <button class="main-header__popup-item-button-link">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <aside>
+                                    <input type="number" min="0" value="1" class="main-header__popup-item-quantity">
+                                </aside>
+                            </article>
+                            <article class="main-header__popup-item last-item-container">
+                                <div class="main-header__popup-item-container">
+                                    <img src="./images/basket/item-2.png" alt="Item image"
+                                        class="main-header__popup-item-image">
+                                    <div class="main-header__popup-item-product">
+                                        <h3 class="main-header__popup-item-description-heading">Sofa Menu</h3>
+                                        <div class="main-header__popup-item-amount">800 €</div>
+                                        <div class="main-header__popup-item-buttons">
+                                            <a href="favorites.html" class="main-header__popup-item-button-link">My
+                                                favorites</a>
+                                            <button class="main-header__popup-item-button-link">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <aside>
+                                    <input type="number" min="0" value="1" class="main-header__popup-item-quantity">
+                                </aside>
+                            </article>
+                            <div class="main-header__popup-order-footer">
+                                <div class="main-header__popup-sum">
+                                    <span class="main-header__popup-sum-label">Total:</span>
+                                    <span class="main-header__popup-sum-amount">1280 €</span>
+                                </div>
+                                <div>
+                                    <a href="./basket.html" class="main-header__popup-order-button">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="main-header__icons">
+                <a href="catalog.html">
+                    <div class="main-header__icon main-header__icon-custom-catalog"></div>
+                </a>
+                <a href="basket.html">
+                    <div class="main-header__icon main-header__icon-custom-basket"></div>
+                </a>
+                <div class="main-header__icon main-header__icon-custom-search"></div>
+            </div>
+        </nav>
+        <section class="main-header__header-content">
+            <h1 class="main-header__title">Catalog</h1>
+        </section>
+    </header>
+    <main class="main-content center">
+        <div class="navigation-section">
+            <ul class="navigation-section__catalog-breadcrumb">
+                <li><a href="index.html" class="navigation-section__catalog-breadcrumb-main">Main</a></li>
+                <li>/</li>
+                <li>Catalog</li>
+            </ul>
+            <div class="navigation-section__filter">
+                <div class="navigation-section__filter-container">
+                    <button id="filtering-button" name="filtering"
+                        class="navigation-section__filter-button">Filter</button>
+                    <form id="filtering-form" class="navigation-section__filter-form" action="#" method="get">
+                        <div class="navigation-section__filter-form-first-column">
+                            <fieldset class="navigation-section__delivery">
+                                <legend class="navigation-section__delivery-title">Delivery
+                                    times
+                                </legend>
+                                <div class="navigation-section__delivery-input">
+                                    <input type="radio" id="radio-doesnt-matter" name="radio-delivery"
+                                        value="doesnt-matter" checked>
+                                    <label for="radio-doesnt-matter"
+                                        class="navigation-section__delivery-input-name">Doesn't matter</label>
+                                </div>
+                                <div class="navigation-section__delivery-input">
+                                    <input type="radio" id="radio-today" name="radio-delivery" value="today">
+                                    <label for="radio-today"
+                                        class="navigation-section__delivery-input-name">Today</label>
+                                </div>
+                                <div class="navigation-section__delivery-input">
+                                    <input type="radio" id="radio-tomorrow" name="radio-delivery" value="tomorrow">
+                                    <label for="radio-tomorrow"
+                                        class="navigation-section__delivery-input-name">Tomorrow</label>
+                                </div>
+                                <div class="navigation-section__delivery-input">
+                                    <input type="radio" id="radio-up-to-3-days" name="radio-delivery"
+                                        value="up-to-3-days">
+                                    <label for="radio-up-to-3-days" class="navigation-section__delivery-input-name">Up
+                                        to 3 days</label>
+                                </div>
+                                <div class="navigation-section__delivery-input">
+                                    <input type="radio" id="radio-up-to-7-days" name="radio-delivery"
+                                        value="up-to-7-days">
+                                    <label for="radio-up-to-7-days" class="navigation-section__delivery-input-name">Up
+                                        to 7 days</label>
+                                </div>
+                            </fieldset>
+                            <fieldset class="navigation-section__price">
+                                <legend class="navigation-section__price-title">Price</legend>
+                                <div class="navigation-section__price-container">
+                                    <div class="navigation-section__price-labels">
+                                        <label for="min-price">From: <span class="min-value">0€</span></label>
+                                        <label for="max-price">To: <span class="max-value">10000€</span></label>
+                                    </div>
+                                    <div class="navigation-section__slider-track">
+                                        <input type="range" id="min-price" name="price" min="0" max="10000" step="1"
+                                            value="0" class="slider slider-min">
+                                        <input type="range" id="max-price" name="price" min="0" max="10000" step="1"
+                                            value="10000" class="slider slider-max">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="navigation-section__color">
+                                <legend class="navigation-section__color-title">Color</legend>
+                                <div class="navigation-section__color-container">
+                                    <label class="navigation-section__color-option color-option-white"
+                                        style="background-color: #FFFFFF;">
+                                        <input type="checkbox" class="navigation-section__color-option-bordered-lighter"
+                                            name="color" value="#FF0000">
+                                    </label>
+                                    <label class="navigation-section__color-option" style="background-color: #000000;">
+                                        <input type="checkbox" class="navigation-section__color-option-bordered"
+                                            name="color" value="#00FF00">
+                                    </label>
+                                    <label class="navigation-section__color-option" style="background-color: #737373;">
+                                        <input type="checkbox" class="navigation-section__color-option-bordered"
+                                            name="color" value="#0000FF">
+                                    </label>
+                                    <label class="navigation-section__color-option" style="background-color: #FF0000;">
+                                        <input type="checkbox" class="navigation-section__color-option-bordered"
+                                            name="color" value="#FFFF00">
+                                    </label>
+                                    <label class="navigation-section__color-option" style="background-color: #FF7A41;">
+                                        <input type="checkbox" class="navigation-section__color-option-bordered"
+                                            name="color" value="#FF0000" checked>
+                                    </label>
+                                    <label class="navigation-section__color-option" style="background-color: #F2CB01;">
+                                        <input type="checkbox" class="navigation-section__color-option-bordered-lighter"
+                                            name="color" value="#00FF00" checked>
+                                    </label>
+                                    <label class="navigation-section__color-option" style="background-color: #00BF2A;">
+                                        <input type="checkbox" class="navigation-section__color-option-bordered"
+                                            name="color" value="#0000FF">
+                                    </label>
+                                    <label class="navigation-section__color-option" style="background-color: #1CCC97;">
+                                        <input type="checkbox" class="navigation-section__color-option-bordered"
+                                            name="color" value="#FFFF00">
+                                    </label>
+                                    <label class="navigation-section__color-option" style="background-color: #009FE3;">
+                                        <input type="checkbox" class="navigation-section__color-option-bordered"
+                                            name="color" value="#FF0000">
+                                    </label>
+                                    <label class="navigation-section__color-option" style="background-color: #000AF8;">
+                                        <input type="checkbox" class="navigation-section__color-option-bordered"
+                                            name="color" value="#00FF00">
+                                    </label>
+                                    <label class="navigation-section__color-option" style="background-color: #6710D6;">
+                                        <input type="checkbox" class="navigation-section__color-option-bordered"
+                                            name="color" value="#0000FF">
+                                    </label>
+                                    <label class="navigation-section__color-option" style="background-color: #9D0DB5;">
+                                        <input type="checkbox" class="navigation-section__color-option-bordered"
+                                            name="color" value="#FF0000">
+                                    </label>
+                                    <label class="navigation-section__color-option" style="background-color: #D89AFF;">
+                                        <input type="checkbox" class="navigation-section__color-option-bordered"
+                                            name="color" value="#00FF00" checked>
+                                    </label>
+                                    <label class="navigation-section__color-option" style="background-color: #FF65A6;">
+                                        <input type="checkbox" class="navigation-section__color-option-bordered"
+                                            name="color" value="#0000FF">
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="navigation-section__sorting-form-filter-column">
+                            <fieldset class="navigation-section__room">
+                                <legend class="navigation-section__room-title">Room type</legend>
+                                <div class="navigation-section__room-options">
+                                    <label class="navigation-section__room-option">
+                                        <input type="checkbox" class="navigation-section__room-option-bordered"
+                                            name="room" value="dining-room" checked>Dining room
+                                    </label>
+                                    <label class="navigation-section__room-option">
+                                        <input type="checkbox" class="navigation-section__room-option-bordered"
+                                            name="room" value="bathroom" checked>Bathroom
+                                    </label>
+                                    <label class="navigation-section__room-option">
+                                        <input type="checkbox" class="navigation-section__room-option-bordered"
+                                            name="room" value="childrens-room">Children's room
+                                    </label>
+                                    <label class="navigation-section__room-option">
+                                        <input type="checkbox" class="navigation-section__room-option-bordered"
+                                            name="room" value="home-office">Home office
+                                    </label>
+                                    <label class="navigation-section__room-option">
+                                        <input type="checkbox" class="navigation-section__room-option-bordered"
+                                            name="room" value="living-room">Living room
+                                    </label>
+                                    <label class="navigation-section__room-option">
+                                        <input type="checkbox" class="navigation-section__room-option-bordered"
+                                            name="room" value="hallway">Hallway
+                                    </label>
+                                    <label class="navigation-section__room-option">
+                                        <input type="checkbox" class="navigation-section__room-option-bordered"
+                                            name="room" value="bedroom">Bedroom
+                                    </label>
+                                    <label class="navigation-section__room-option">
+                                        <input type="checkbox" class="navigation-section__room-option-bordered"
+                                            name="room" value="wardrobe">Wardrobe
+                                    </label>
+                                    <label class="navigation-section__room-option">
+                                        <input type="checkbox" class="navigation-section__room-option-bordered"
+                                            name="room" value="country-house">Country house
+                                    </label>
+                                    <label class="navigation-section__room-option">
+                                        <input type="checkbox" class="navigation-section__room-option-bordered"
+                                            name="room" value="light">Light
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <div class="navigation-section__filter-apply-button-container">
+                                <button class="navigation-section__filter-apply-button">Apply</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="navigation-section__sorting-container">
+                    <button id="sorting-button" name="sorting"
+                        class="navigation-section__sorting-button">Sorting</button>
+                    <form id="sorting-form" class="navigation-section__sorting-form" action="#" method="get">
+                        <fieldset class="navigation-section__sorting">
+                            <div class="navigation-section__sorting-input">
+                                <input type="radio" id="radio-by-popularity" name="radio-sorting" value="by-popularity">
+                                <label for="radio-by-popularity" class="navigation-section__sorting-input-name">By
+                                    Popularity</label>
+                            </div>
+                            <div class="navigation-section__sorting-input">
+                                <input type="radio" id="radio-new" name="radio-sorting" value="new" checked>
+                                <label for="radio-new" class="navigation-section__sorting-input-name">New</label>
+                            </div>
+                            <div class="navigation-section__sorting-input">
+                                <input type="radio" id="radio-favorites" name="radio-sorting" value="favorites">
+                                <label for="radio-favorites"
+                                    class="navigation-section__sorting-input-name">Favorites</label>
+                            </div>
+                            <div class="navigation-section__sorting-input">
+                                <input type="radio" id="lowest-price" name="radio-sorting" value="lowest-price">
+                                <label for="lowest-price" class="navigation-section__sorting-input-name">Lowest
+                                    price</label>
+                            </div>
+                            <div class="navigation-section__sorting-input">
+                                <input type="radio" id="higher-price" name="radio-sorting" value="higher-price">
+                                <label for="higher-price" class="navigation-section__sorting-input-name">Higher
+                                    price</label>
+                            </div>
+                            <div class="navigation-section__sorting-input">
+                                <input type="radio" id="offers" name="radio-sorting" value="offers">
+                                <label for="offers" class="navigation-section__sorting-input-name">Offers</label>
+                            </div>
+                        </fieldset>
+                        <div class="navigation-section__sorting-apply-button-container">
+                            <button class="navigation-section__sorting-apply-button">Apply</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="catalog-section">
+            <div class="catalog-section__items-container">
+                <article class="catalog-section__item">
+                    <div class="catalog-section__item-image">
+                        <img src="./images/catalog/catalog-section-1.png" alt="Image of the product"
+                            class="catalog-section__image">
+                        <div class="catalog-section__hover-icons">
+                            <span class="catalog-section__icon catalog-section__icon--basket"></span>
+                            <span class="catalog-section__icon catalog-section__icon--wishlist"></span>
+                        </div>
+                    </div>
+                    <h3 class="catalog-section__product-name">Bed TATRAN</h3>
+                    <p class="catalog-section__product-description">The polished stainless steel base gives an
+                        original floating effect.</p>
+                    <span class="catalog-section__product-price">120 €</span>
+                </article>
+                <article class="catalog-section__item">
+                    <div class="catalog-section__item-image">
+                        <img src="./images/catalog/catalog-section-2.png" alt="Image of the product"
+                            class="catalog-section__image">
+                        <div class="catalog-section__hover-icons">
+                            <span class="catalog-section__icon catalog-section__icon--basket"></span>
+                            <span class="catalog-section__icon catalog-section__icon--wishlist"></span>
+                        </div>
+                    </div>
+                    <h3 class="catalog-section__product-name">Armchair VILORA</h3>
+                    <p class="catalog-section__product-description">Soft and cozy, neat and stylish. The seat
+                        cushions are firm and the fabric is pleasant to the touch.</p>
+                    <span class="catalog-section__product-price">210 €</span>
+                </article>
+                <article class="catalog-section__item">
+                    <div class="catalog-section__item-image">
+                        <img src="./images/catalog/catalog-section-3.png" alt="Image of the product"
+                            class="catalog-section__image">
+                        <div class="catalog-section__hover-icons">
+                            <span class="catalog-section__icon catalog-section__icon--basket"></span>
+                            <span class="catalog-section__icon catalog-section__icon--wishlist"></span>
+                        </div>
+                    </div>
+                    <h3 class="catalog-section__product-name">Table MENU</h3>
+                    <p class="catalog-section__product-description">Highly elastic polyurethane foam in the
+                        “filling” of the chair is reliable and durable.</p>
+                    <span class="catalog-section__product-price">340 €</span>
+                </article>
+                <article class="catalog-section__item">
+                    <div class="catalog-section__item-image">
+                        <img src="./images/catalog/catalog-section-4.png" alt="Image of the product"
+                            class="catalog-section__image">
+                        <div class="catalog-section__hover-icons">
+                            <span class="catalog-section__icon catalog-section__icon--basket"></span>
+                            <span class="catalog-section__icon catalog-section__icon--wishlist"></span>
+                        </div>
+                    </div>
+                    <h3 class="catalog-section__product-name">Sofa ASKESTA</h3>
+                    <p class="catalog-section__product-description">The polished stainless steel base gives an
+                        original floating effect.</p>
+                    <span class="catalog-section__product-price">680 €</span>
+                </article>
+                <article class="catalog-section__item">
+                    <div class="catalog-section__item-image">
+                        <img src="./images/catalog/catalog-section-5.png" alt="Image of the product"
+                            class="catalog-section__image">
+                        <div class="catalog-section__hover-icons">
+                            <span class="catalog-section__icon catalog-section__icon--basket"></span>
+                            <span class="catalog-section__icon catalog-section__icon--wishlist"></span>
+                        </div>
+                    </div>
+                    <h3 class="catalog-section__product-name">Armchair LUNAR</h3>
+                    <p class="catalog-section__product-description">Perfectly tolerates sunlight, changes in
+                        humidity and any precipitation.</p>
+                    <span class="catalog-section__product-price">400 €</span>
+                </article>
+                <article class="catalog-section__item">
+                    <div class="catalog-section__item-image">
+                        <img src="./images/catalog/catalog-section-6.png" alt="Image of the product"
+                            class="catalog-section__image">
+                        <div class="catalog-section__hover-icons">
+                            <span class="catalog-section__icon catalog-section__icon--basket"></span>
+                            <span class="catalog-section__icon catalog-section__icon--wishlist"></span>
+                        </div>
+                    </div>
+                    <h3 class="catalog-section__product-name">Closet NASTAN</h3>
+                    <p class="catalog-section__product-description">The model is distinguished by the simplicity
+                        of
+                        its lines and shapes and the absence of flashy decor.</p>
+                    <span class="catalog-section__product-price">800 €</span>
+                </article>
+                <article class="catalog-section__item">
+                    <div class="catalog-section__item-image">
+                        <img src="./images/catalog/catalog-section-1.png" alt="Image of the product"
+                            class="catalog-section__image">
+                        <div class="catalog-section__hover-icons">
+                            <span class="catalog-section__icon catalog-section__icon--basket"></span>
+                            <span class="catalog-section__icon catalog-section__icon--wishlist"></span>
+                        </div>
+                    </div>
+                    <h3 class="catalog-section__product-name">Bed TATRAN</h3>
+                    <p class="catalog-section__product-description">The polished stainless steel base gives an
+                        original floating effect.</p>
+                    <span class="catalog-section__product-price">120 €</span>
+                </article>
+                <article class="catalog-section__item">
+                    <div class="catalog-section__item-image">
+                        <img src="./images/catalog/catalog-section-2.png" alt="Image of the product"
+                            class="catalog-section__image">
+                        <div class="catalog-section__hover-icons">
+                            <span class="catalog-section__icon catalog-section__icon--basket"></span>
+                            <span class="catalog-section__icon catalog-section__icon--wishlist"></span>
+                        </div>
+                    </div>
+                    <h3 class="catalog-section__product-name">Armchair VILORA</h3>
+                    <p class="catalog-section__product-description">Soft and cozy, neat and stylish. The seat
+                        cushions are firm and the fabric is pleasant to the touch.</p>
+                    <span class="catalog-section__product-price">210 €</span>
+                </article>
+                <article class="catalog-section__item">
+                    <div class="catalog-section__item-image">
+                        <img src="./images/catalog/catalog-section-3.png" alt="Image of the product"
+                            class="catalog-section__image">
+                        <div class="catalog-section__hover-icons">
+                            <span class="catalog-section__icon catalog-section__icon--basket"></span>
+                            <span class="catalog-section__icon catalog-section__icon--wishlist"></span>
+                        </div>
+                    </div>
+                    <h3 class="catalog-section__product-name">Table MENU</h3>
+                    <p class="catalog-section__product-description">Highly elastic polyurethane foam in the
+                        “filling” of the chair is reliable and durable.</p>
+                    <span class="catalog-section__product-price">340 €</span>
+                </article>
+                <article class="catalog-section__item">
+                    <div class="catalog-section__item-image">
+                        <img src="./images/catalog/catalog-section-4.png" alt="Image of the product"
+                            class="catalog-section__image">
+                        <div class="catalog-section__hover-icons">
+                            <span class="catalog-section__icon catalog-section__icon--basket "></span>
+                            <span class="catalog-section__icon catalog-section__icon--wishlist"></span>
+                        </div>
+                    </div>
+                    <h3 class="catalog-section__product-name">Sofa ASKESTA</h3>
+                    <p class="catalog-section__product-description">The polished stainless steel base gives an
+                        original floating effect.</p>
+                    <span class="catalog-section__product-price">680 €</span>
+                </article>
+                <article class="catalog-section__item">
+                    <div class="catalog-section__item-image">
+                        <img src="./images/catalog/catalog-section-5.png" alt="Image of the product"
+                            class="catalog-section__image">
+                        <div class="catalog-section__hover-icons">
+                            <span class="catalog-section__icon catalog-section__icon--basket "></span>
+                            <span class="catalog-section__icon catalog-section__icon--wishlist"></span>
+                        </div>
+                    </div>
+                    <h3 class="catalog-section__product-name">Armchair LUNAR</h3>
+                    <p class="catalog-section__product-description">Perfectly tolerates sunlight, changes in
+                        humidity and any precipitation.</p>
+                    <span class="catalog-section__product-price">400 €</span>
+                </article>
+                <article class="catalog-section__item">
+                    <div class="catalog-section__item-image">
+                        <img src="./images/catalog/catalog-section-6.png" alt="Image of the product"
+                            class="catalog-section__image">
+                        <div class="catalog-section__hover-icons">
+                            <span class="catalog-section__icon catalog-section__icon--basket "></span>
+                            <span class="catalog-section__icon catalog-section__icon--wishlist"></span>
+                        </div>
+                    </div>
+                    <h3 class="catalog-section__product-name">Closet NASTAN</h3>
+                    <p class="catalog-section__product-description">The model is distinguished by the simplicity
+                        of
+                        its lines and shapes and the absence of flashy decor.</p>
+                    <span class="catalog-section__product-price">800 €</span>
+                </article>
+            </div>
+            <p class="catalog-section__link-container">
+                <a href="catalog.html" class="catalog-section__link-container-element">Show more</a>
+            </p>
+        </div>
+    </main>
+    <footer class="main-footer center">
+        <a href="index.html" class="main-footer__logo-container">
+            <img src="./images/darklogo.svg" alt="Logo" class="main-footer__logo">
+        </a>
+        <div class="main-footer__navigation-elements">
+            <section class="main-footer__menu">
+                <h4 class="main-footer__title">Menu</h4>
+                <ul class="main-footer__menu-container">
+                    <li class="main-footer__nav-element">
+                        <a href="index.html" class="main-footer__menu-link">Main</a>
+                    </li>
+                    <li class="main-footer__nav-element">
+                        <a href="catalog.html" class="main-footer__menu-link">Catalog</a>
+                    </li>
+                    <li class="main-footer__nav-element">
+                        <a href="basket.html" class="main-footer__menu-link">Basket</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="main-footer__contacts">
+                <h4 class="main-footer__title">Contacts</h4>
+                <ul class="main-footer__menu-container">
+                    <li class="main-footer__nav-element">
+                        <a href="tel:+79088008080" class="main-footer__contact-link">+7 908 800 80 80</a>
+                    </li>
+                    <li class="main-footer__nav-element">
+                        <a href="mailto:help@interier.com" class="main-footer__contact-link">help@interier.com</a>
+                    </li>
+                    <li class="main-footer__nav-element">
+                        <a href="https://vk.com" target="_blank" class="main-footer__logo-link">
+                            <img src="./images/vk.svg" alt="logo vk" class="main-footer__logo-image"></a>
+                        <a href="https://telegram.org" target="_blank" class="main-footer__logo-link">
+                            <img src="./images/telegram.svg" alt="logo telegram" class="main-footer__logo-image"></a>
+                        <a href="https://dzen.com" target="_blank" class="main-footer__logo-link">
+                            <img src="./images/dzen.svg" alt="logo dzen" class="main-footer__logo-image"></a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <form class="main-footer__subscription-form">
+            <div>
+                <p class="main-footer__paragraph">Get our news and updates</p>
+            </div>
+            <p>
+                <input type="email" id="user-email" placeholder="Email" class="main-footer__input-email">
+            </p>
+            <button class="main-footer__subscription-button">Subscribe</button>
+        </form>
+    </footer>
+
+    <script src="./script.js">
+    </script>
+</body>
+
+</html>

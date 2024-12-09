@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header center">
+        <nav class="main-header__navigation-container">
+            <a href="index.html"><img src="./images/logo.svg" alt="Logo" class="main-header__navigation-logo"></a>
+            <p class="main-header__search-container">
+                <input type="search" placeholder="Search" class="main-header__search">
+            </p>
+            <ul class="main-header__menu-container">
+                <li>
+                    <a href="catalog.html" class="main-header__menu-link">Catalog</a>
+                </li>
+                <li class="main-header__basket-container">
+                    <a href="basket.html" class="main-header__menu-link" id="basket-link">Basket</a>
+                    <div id="basket-popup" class="main-header__popup">
+                        <div class="main-header__popup-order">
+                            <article class="main-header__popup-item">
+                                <div class="main-header__popup-item-container">
+                                    <img src="./images/basket/item-1.png" class="main-header__popup-item-image"
+                                        alt="Item image">
+                                    <div class="main-header__popup-item-product">
+                                        <h3 class="main-header__popup-item-description-heading">Table Menu</h3>
+                                        <div class="main-header__popup-item-amount">340 €</div>
+                                        <div class="main-header__popup-item-buttons">
+                                            <a href="favorites.html" class="main-header__popup-item-button-link">My
+                                                favorites</a>
+                                            <button class="main-header__popup-item-button-link">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <aside>
+                                    <input type="number" min="0" value="1" class="main-header__popup-item-quantity">
+                                </aside>
+                            </article>
+                            <article class="main-header__popup-item last-item-container">
+                                <div class="main-header__popup-item-container">
+                                    <img src="./images/basket/item-2.png" alt="Item image"
+                                        class="main-header__popup-item-image">
+                                    <div class="main-header__popup-item-product">
+                                        <h3 class="main-header__popup-item-description-heading">Sofa Menu</h3>
+                                        <div class="main-header__popup-item-amount">800 €</div>
+                                        <div class="main-header__popup-item-buttons">
+                                            <a href="favorites.html" class="main-header__popup-item-button-link">My
+                                                favorites</a>
+                                            <button class="main-header__popup-item-button-link">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <aside>
+                                    <input type="number" min="0" value="1" class="main-header__popup-item-quantity">
+                                </aside>
+                            </article>
+                            <div class="main-header__popup-order-footer">
+                                <div class="main-header__popup-sum">
+                                    <span class="main-header__popup-sum-label">Total:</span>
+                                    <span class="main-header__popup-sum-amount">1280 €</span>
+                                </div>
+                                <div>
+                                    <a href="./basket.html" class="main-header__popup-order-button">Buy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="main-header__icons">
+                <a href="catalog.html">
+                    <div class="main-header__icon main-header__icon-custom-catalog"></div>
+                </a>
+                <a href="basket.html">
+                    <div class="main-header__icon main-header__icon-custom-basket"></div>
+                </a>
+                <div class="main-header__icon main-header__icon-custom-search"></div>
+            </div>
+        </nav>
+        <section class="main-header__header-content">
+            <h1 class="main-header__title">Everything your home deserves</h1>
+            <p class="main-header__paragraph">Our furniture is your reflection</p>
+            <a href="catalog.html" class="main-header__catalog-link">Go to catalog</a>
+        </section>
+    </header>
+    <main class="main-content center">
+        <section class="furniture-for-section">
+            <h2 class="furniture-for-section__title">Furniture for ...</h2>
+            <div class="furniture-for-section__container">
+                <article class="furniture-for-section__living-room centered">
+                    <h3 class="furniture-for-section__container-name">Living room</h3>
+                </article>
+                <article class="furniture-for-section__cabinet centered">
+                    <h3 class="furniture-for-section__container-name">Cabinet</h3>
+                </article>
+                <article class="furniture-for-section__kitchen centered">
+                    <h3 class="furniture-for-section__container-name">Kitchen</h3>
+                </article>
+                <article class="furniture-for-section__children-room centered">
+                    <h3 class="furniture-for-section__container-name">Children's room</h3>
+                </article>
+                <article class="furniture-for-section__bathroom centered">
+                    <h3 class="furniture-for-section__container-name">Bathroom</h3>
+                </article>
+            </div>
+        </section>
+        <section class="furniture-section">
+            <h2 class="furniture-section__title">Special offers</h2>
+            <div class="furniture-section__items-container">
+                <article class="furniture-section__item">
+                    <img src="./images/index/furniture-section-1.png" alt="Image of product"
+                        class="furniture-section__image">
+                    <h3 class="furniture-section__product-name">Chandelier VODA</h3>
+                    <p class="furniture-section__product-description">The polished stainless steel base gives an
+                        original floating effect.</p>
+                    <span class="furniture-section__product-price furniture-section__new-price">45 €</span>
+                    <span class="furniture-section__product-price furniture-section__old-price">67 €</span>
+                </article>
+                <article class="furniture-section__item">
+                    <img src="./images/index/furniture-section-2.png" alt="Image of product"
+                        class="furniture-section__image">
+                    <h3 class="furniture-section__product-name">Sofa RONALD</h3>
+                    <p class="furniture-section__product-description">The model is distinguished by its simple lines and
+                        shapes and the absence of flashy decor.</p>
+                    <span class="furniture-section__product-price furniture-section__new-price">156 €</span>
+                    <span class="furniture-section__product-price furniture-section__old-price">198 € </span>
+                </article>
+                <article class="furniture-section__item">
+                    <img src="./images/index/furniture-section-3.png" alt="Image of product"
+                        class="furniture-section__image">
+                    <h3 class="furniture-section__product-name">Dresser VENT</h3>
+                    <p class="furniture-section__product-description">European oak - is distinguished by its particular
+                        strength and stability.</p>
+                    <span class="furniture-section__product-price furniture-section__new-price">340 €</span>
+                    <span class="furniture-section__product-price furniture-section__old-price">450 €</span>
+                </article>
+            </div>
+        </section>
+        <section class="catalog-section">
+            <h2 class="catalog-section__title">Catalog</h2>
+            <div class="catalog-section__items-container">
+                <article class="catalog-section__item">
+                    <img src="./images/index/catalog-section-1.jpg" alt="Image of product"
+                        class="catalog-section__image">
+                    <h3 class="catalog-section__product-name">Bed VTATRAN</h3>
+                    <p class="catalog-section__product-description">The polished stainless steel base gives an original
+                        floating effect.</p>
+                    <span class="catalog-section__product-price">120 €</span>
+                </article>
+                <article class="catalog-section__item">
+                    <img src="./images/index/catalog-section-2.jpg" alt="Image of product"
+                        class="catalog-section__image">
+                    <h3 class="catalog-section__product-name">Armchair VILORA</h3>
+                    <p class="catalog-section__product-description">Soft and cozy, neat and stylish. The seat cushions
+                        are firm and the fabric is pleasant to the touch.</p>
+                    <span class="catalog-section__product-price">210 €</span>
+                </article>
+                <article class="catalog-section__item">
+                    <img src="./images/index/catalog-section-3.jpg" alt="Image of product"
+                        class="catalog-section__image">
+                    <h3 class="catalog-section__product-name">Table MENU</h3>
+                    <p class="catalog-section__product-description">Highly elastic polyurethane foam in the “filling” of
+                        the chair is reliable and durable.</p>
+                    <span class="catalog-section__product-price">340 €</span>
+                </article>
+                <article class="catalog-section__item">
+                    <img src="./images/index/catalog-section-4.jpg" alt="Image of product"
+                        class="catalog-section__image">
+                    <h3 class="catalog-section__product-name">Armchair ASKESTA</h3>
+                    <p class="catalog-section__product-description">The polished stainless steel base gives an original
+                        floating effect.</p>
+                    <span class="catalog-section__product-price">680 €</span>
+                </article>
+                <article class="catalog-section__item">
+                    <img src="./images/index/catalog-section-5.jpg" alt="Image of product"
+                        class="catalog-section__image">
+                    <h3 class="catalog-section__product-name">Table NORMAN</h3>
+                    <p class="catalog-section__product-description">Perfectly tolerates sunlight, changes in humidity
+                        and any precipitation.</p>
+                    <span class="catalog-section__product-price">400 €</span>
+                </article>
+                <article class="catalog-section__item">
+                    <img src="./images/index/catalog-section-6.jpg" alt="Image of product"
+                        class="catalog-section__image">
+                    <h3 class="catalog-section__product-name">Sofa NASTAN</h3>
+                    <p class="catalog-section__product-description">The model is distinguished by the simplicity of its
+                        lines and shapes and the absence of flashy decor.</p>
+                    <span class="catalog-section__product-price">800 €</span>
+                </article>
+            </div>
+            <p class="catalog-section__link-container">
+                <a href="catalog.html" class="catalog-section__link-container-element">View all</a>
+            </p>
+        </section>
+    </main>
+    <footer class="main-footer center">
+        <a href="index.html" class="main-footer__logo-container">
+            <img src="./images/darklogo.svg" alt="Logo" class="main-footer__logo">
+        </a>
+        <div class="main-footer__navigation-elements">
+            <section class="main-footer__menu">
+                <h4 class="main-footer__title">Menu</h4>
+                <ul class="main-footer__menu-container">
+                    <li class="main-footer__nav-element">
+                        <a href="index.html" class="main-footer__menu-link">Main</a>
+                    </li>
+                    <li class="main-footer__nav-element">
+                        <a href="catalog.html" class="main-footer__menu-link">Catalog</a>
+                    </li>
+                    <li class="main-footer__nav-element">
+                        <a href="basket.html" class="main-footer__menu-link">Basket</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="main-footer__contacts">
+                <h4 class="main-footer__title">Contacts</h4>
+                <ul class="main-footer__menu-container">
+                    <li class="main-footer__nav-element">
+                        <a href="tel:+79088008080" class="main-footer__contact-link">+7 908 800 80 80</a>
+                    </li>
+                    <li class="main-footer__nav-element">
+                        <a href="mailto:help@interier.com" class="main-footer__contact-link">help@interier.com</a>
+                    </li>
+                    <li class="main-footer__nav-element">
+                        <a href="https://vk.com" target="_blank" class="main-footer__logo-link">
+                            <img src="./images/vk.svg" alt="logo vk" class="main-footer__logo-image"></a>
+                        <a href="https://telegram.org" target="_blank" class="main-footer__logo-link">
+                            <img src="./images/telegram.svg" alt="logo telegram" class="main-footer__logo-image"></a>
+                        <a href="https://dzen.com" target="_blank" class="main-footer__logo-link">
+                            <img src="./images/dzen.svg" alt="logo dzen" class="main-footer__logo-image"></a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <form class="main-footer__subscription-form">
+            <div>
+                <p class="main-footer__paragraph">Get our news and updates</p>
+            </div>
+            <p>
+                <input type="email" id="user-email" placeholder="Email" class="main-footer__input-email">
+            </p>
+            <button class="main-footer__subscription-button">Subscribe</button>
+        </form>
+    </footer>
+
+    <script src="./script.js">
+    </script>
+</body>
+
+</html>

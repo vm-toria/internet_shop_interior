@@ -1,0 +1,261 @@
+@import "main";
+
+.main-header {
+    height: 400px;
+    background-image: url('./images/basket/basket-main.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.main-content {
+    .order-section {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 64px;
+
+
+        &__order {
+            display: grid;
+            justify-content: center;
+            width: 65%;
+        }
+
+        &__order-header {
+            display: flex;
+            justify-content: space-between;
+            height: 34px;
+            border-bottom: 0.5px solid $border-color;
+        }
+
+        &__order-title {
+            color: $primary-color;
+            font-size: $font-size-medium;
+            font-weight: $font-weight-normal;
+        }
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 32px;
+            padding-bottom: 32px;
+            border-bottom: 0.5px solid $border-color;
+        }
+
+        .last-item-container {
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            border-bottom: none
+        }
+
+        &__item-image {
+            width: 173px;
+            height: 173px;
+            margin-right: 31px;
+        }
+
+        &__item-product {
+            margin-right: 235px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__item-description-heading {
+            color: $primary-color;
+            font-size: $font-size-large;
+            font-weight: $font-weight-normal;
+        }
+
+        &__item-description {
+            color: $secondary-color;
+            font-size: $font-size-base;
+            font-weight: $font-weight-normal;
+            margin-bottom: 16px;
+            margin-top: 14px;
+        }
+
+        &__item-amount {
+            color: $primary-color;
+            font-size: $font-size-medium;
+            font-weight: $font-weight-normal;
+        }
+
+        &__item-buttons {
+            display: flex;
+            justify-content: start;
+            gap: 20px;
+            margin-top: 19px;
+            cursor: pointer;
+        }
+
+        &__item-button-link {
+            font: inherit;
+            color: $primary-color;
+            font-size: $font-size-base;
+            font-weight: $font-weight-normal;
+            text-decoration: underline;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        &__item-button-link:hover {
+            text-decoration: none;
+            color: $secondary-color;
+        }
+
+        &__item-quantity {
+            width: 71px;
+            height: 51px;
+            background-color: $background-light;
+            border: none;
+            border-radius: 6px;
+            color: $primary-color;
+            text-align: center;
+            font-size: $font-size-base;
+            font-weight: $font-weight-medium;
+        }
+
+        &__order-footer {
+            display: flex;
+            justify-content: start;
+            margin-top: 60px;
+            gap: 7px;
+        }
+
+        &__order-footer-button {
+            font: inherit;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 200px;
+            border-radius: 50px;
+            border: 1px solid $primary-color;
+            color: $primary-color;
+            font-size: 14px;
+            font-weight: $font-weight-normal;
+            background-color: transparent;
+            text-decoration: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        &__order-footer-button:hover {
+            background-color: $primary-color;
+            color: #fff;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        &__order-footer-button:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        &__order-form {
+            display: grid;
+            justify-content: center;
+            width: 31.5%;
+            background-color: $background-light;
+            border-radius: $border-radius;
+        }
+
+        &__order-heading {
+            color: $primary-color;
+            text-align: center;
+            font-size: $font-size-large;
+            font-weight: $font-weight-bold;
+            margin-top: 42px;
+            margin-bottom: 35px;
+        }
+
+        &__order-input {
+            font: inherit;
+            border: none;
+            border-bottom: 1px solid $border-color;
+            width: 288px;
+            background-color: $background-light;
+            padding-bottom: 3px;
+            margin-bottom: 43px;
+            cursor: pointer;
+            color: $primary-color;
+            font-size: $font-size-base;
+            font-weight: $font-weight-normal;
+        }
+
+        &__input-email::placeholder {
+            color: $secondary-color;
+        }
+
+        &__order-input:focus {
+            box-shadow: 0 5px 5px -3px $tertiary-color;
+            outline: none;
+            border: none;
+        }
+
+        .last-element-input {
+            margin-bottom: 0px;
+        }
+
+        &__sum {
+            font: inherit;
+            display: flex;
+            justify-content: center;
+            margin-top: 64px;
+            text-align: center;
+            font-weight: $font-weight-normal;
+            color: $primary-color;
+            font-size: $font-size-base;
+        }
+
+        &__sum-label {
+            font: inherit;
+            color: $primary-color;
+            text-align: center;
+            font-size: $font-size-large;
+            font-weight: $font-weight-normal;
+            padding-right: 8px;
+        }
+
+        &__sum-amount {
+            color: $primary-color;
+            text-align: center;
+            font-weight: $font-weight-semi-bold;
+            font-size: $font-size-large;
+        }
+
+        &__order-button {
+            font: inherit;
+            border-radius: $border-radius;
+            border: 1px solid $primary-color;
+            background-color: transparent;
+            color: $primary-color;
+            font-size: $font-size-medium;
+            font-weight: $font-weight-normal;
+            padding-top: 10px;
+            padding-bottom: 11px;
+            width: 290px;
+            border-radius: $border-radius;
+            text-align: center;
+            margin-bottom: 148px;
+            margin-top: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        &__order-button:hover {
+            background-color: $primary-color;
+            color: #fff;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        &__order-button:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+@import "tablet";
